@@ -1,5 +1,5 @@
 const app = require('./app')
-const {DB_HOST} = require('./config')
+const {DB_HOST} = process.env
 const mongoose = require('mongoose')
 
 mongoose.connect(DB_HOST)
@@ -13,4 +13,3 @@ mongoose.connect(DB_HOST)
     process.exit(1)
   })
 
-  console.log(process.env);
